@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<meta="charset UTF-8">
+		<title>Lecture 2</title>		
+	</head>
+
+	<p>
+	It is recommended to not use the image tag itself to modify the height or width elements<br>
+	within the image tag.
+	</p>
+
+	<p>
+	Special Characters are available to be used in html. Look up html ascii codes for them<br>
+	&#169; The code include an ampersand followed by a hashtag, a number, and closed by a ;
+	</p>
+
+	<table>
+		<th>Header</th> <!--Cell Heading Tag-->
+		<tr>this row</tr> <!--Table row tag-->
+		<td>table data</td> <!--Table data cell tag-->
+	</table>
+	<!--Prof didn't make a slideshow on tables but we can look this up later-->
+
+	<p>We started doing the lab assignment involving tables</p>
+	<p><br>Below is the code for it that was done</p>
+
+	<table>
+		<caption>Red Rock, CO</caption>
+		<tr> <!--First Row with only headers-->
+			<th>Photo</th>
+			<th>Date</th>
+			<th>Description</th>
+		</tr>
+
+		<tr> <!--Second Row of only data-->
+			<td><img src="vacation1.jpg" alt="photo of the beach"></td> 		<!--Photo-->
+			<td>October 1, 2020</td>				<!--Date-->
+			<td>The most awesome beach you ever did see!</td>	<!--Description-->
+		</tr>
+		<!--Do the same for the remaining rows-->
+		<!--Note that there was a cellspan attribute that the lab asked you to include too -->
+
+		<p>Previously we learned about the anchor tag a and how it has an attribute href that is <br>
+		set to the value of the website or file for which to load. We can however also make an image<br>
+		be the clickable element for this link by inserting an img tag within the a tag</p>
+
+		<a href="https://www.google.com/search?newwindow=1&client=safari&sca_esv=33160aea3cdc4e48&sxsrf=ACQVn08vebPeT_XmzLYZOah4bqV3pnRwKQ:1709372474536&q=sindel+mortal+kombat&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiwiIjZpNWEAxW2EFkFHU8SCysQ0pQJegQIFBAB&biw=1440&bih=820&dpr=2"><img src="sindel.jpeg" alt="image of sindel" height="300" width="500"></a> <!--Note that it is recommended to not use height and width attributes. Style in CSS!-->
+		<h6>Click on this image to see where it takes you!</h6>
+</html>

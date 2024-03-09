@@ -1,0 +1,198 @@
+
+								<!--HW #2 Intro to HTML/CSS/Javascript-->
+
+<!--Note that margins are for space outside of the element border, and padding is for space withing the element border-->
+
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>HW 2 Practice</title>
+
+<!--Note*:
+	- margins are for space outside of the element border, and padding is for space within the element border
+	- colors can be either predetermined names, rgb(#,#,#) or #FFFFFF values. Use a color picker!
+-->
+		<style>
+h3{
+	color: blue;
+	background-color: lightgrey;
+}
+
+p{
+	color: black;
+	background-color: lightblue;
+	background-color: #3EC4A5;
+	background-color: rbg(62, 196, 165);
+	font-family: arial;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px;
+	font-size: 12pt;
+}
+
+strong{
+	background-color: lightgreen;
+}
+span{
+	color: lightgrey;
+}
+		</style>
+	</head>
+	<!--End of Head-->
+	
+	<h3>HW#2 Intro to HTML/CSS/Javascript</h3>
+	<body>
+
+		<p>
+		CSS stands for Cascading Style Sheets! <strong>CSS rules</strong> specify specify styling properties for specific <strong>HTML elements</strong>.<br>
+		CSS rules are placed withing <strong>&lt;style&gt; &lt; &#47;style&gt; tags</strong>. Theses rules are placed within the head element of html in the<br>
+		beginning. In the style tags are style element in the format of<br>element&#123;<br>property&#58;value&#59;this-property&#58;value&#59;<br>
+		that-property&#58;value&#59;<br>&#125;<br>
+		Each element in the <strong>&lt;style&gt;</strong> tag is named after the elements in the body that will be formatted according to the properties and<br>
+		values. There is no need for &lt; or &gt; signs just the element name.<br>
+		</p>
+
+		<!--This paragraph now has an id. Id's can be applied to any element. And will be used later in the script tag-->
+		<p id="js-p">
+		Javascript is a programming language that runs in the browser and allows for page interactivity. <strong>It can be included in either the &lt;head&gt;<br>
+		or its &lt;body&gt; parts</strong>
+		</p>
+
+								<!--Javascript Practice:-->
+		<button id="test-btn">Click Me!</button>
+		
+		<p>
+		Here is my first <strong>reactive button!</strong> Click here to change the text color to blue!:
+		<button id="blue-btn">Blue!</button>
+		<br>Did it work? ._.
+		</p>
+
+		<!-- In the script tag you will:
+			- define what happens when the button is clicked
+			- define the functions themselves.
+			- use id's to target specific elements
+			- the JavaScript function document.getElementById("idName") searches the entire HTML document for and returns
+			an element with the id="idName".
+			- The variable blueButton is declared using the let keyword and is assigned using the = sign:
+			the value of this variable can either be:
+				- a value
+				- a link to an element of a webpage. This is what is returned by the document.getElementById function?
+			- variable.addEventListener("click", function(){callFunctions and pass arguments};
+			This adds an eventListener to a variable assigned a link to an element. The event to listen for is a "click"
+			And when the "click" occurs the functions in function(){}; will be called with respective arguments.
+			- alert(); is another JavaScript function that displays an alert message box with your desired message.
+			Note the order in which these alerts are executed when you click the button!
+			- if else statements work similarly to c++, see below for whats possible!
+		-->
+		<script>
+			let blueButton = document.getElementById("blue-btn");
+			
+			blueButton.addEventListener("click",
+				function(){
+					changeTextColor("blue");
+					alert("Alert 1: Hi! :)");
+				});
+
+			function changeTextColor(newColor){
+				let target = document.getElementById("js-p");
+
+				if(target.style.color == "blue"){
+					alert("Already Blue! Resetting!");
+					target.style.color = "black";
+				}
+				else{
+					target.style.color = newColor;
+					alert("Alert 2: Changed To Blue! :)");
+				}
+			}
+
+		</script>
+
+		<button id="reset-btn">Reset</button>
+		<h2>Rate My Pseudo-Professor</h2>
+		<p id="rating-p">
+			<strong>Rating:</strong>
+			<span id="star-1">&#9733;</span>
+			<span id="star-2">&#9733;</span>
+			<span id="star-3">&#9733;</span>
+			<span id="star-4">&#9733;</span>
+			<span id="star-5">&#9733;</span><br>
+		</p>
+
+		<script>
+			let starOne = document.getElementById("star-1");
+			let starTwo = document.getElementById("star-2");
+			let starThree = document.getElementById("star-3");
+			let starFour = document.getElementById("star-4");
+			let starFive = document.getElementById("star-5");
+			
+			starOne.style.color = "red";
+
+			starOne.addEventListener("click",
+				function(){
+					updateRating(1);
+				});
+			starTwo.addEventListener("click",
+				function(){
+					updateRating(2);
+				});
+			starThree.addEventListener("click",
+				function(){
+					updateRating(3);
+				});
+			starFour.addEventListener("click",
+				function(){
+					updateRating(4);
+				});
+			starFive.addEventListener("click",
+				function(){
+					updateRating(5);
+				});
+
+			function updateRating(newRating){
+				let star1 = document.getElementById("star-1");
+				let star2 = document.getElementById("star-2");
+				let star3 = document.getElementById("star-3");
+				let star4 = document.getElementById("star-4");
+				let star5 = document.getElementById("star-5");
+
+				star1.style.color = "lightgray";
+				star2.style.color = "lightgray";
+				star3.style.color = "lightgray";
+				star4.style.color = "lightgray";
+				star5.style.color = "lightgray";
+				
+				if(newRating == 1){
+					star1.style.color = "blue";
+				}
+				else if(newRating == 2){
+					star2.style.color = "blue";
+					star1.style.color = "blue";
+				}
+				else if(newRating == 3){
+					star3.style.color = "blue";
+					star1.style.color = "blue";
+					star2.style.color = "blue";
+				}
+				else if(newRating == 4){
+					star1.style.color = "blue";
+					star2.style.color = "blue";
+					star3.style.color = "blue";
+					star4.style.color = "blue";
+				}
+				else if(newRating == 5){
+					star1.style.color = "blue";
+					star2.style.color = "blue";
+					star3.style.color = "blue";
+					star4.style.color = "blue";
+					star5.style.color = "blue";
+				}
+			}
+		</script>
+		<!--A canvas tag creates a rectangular area within a webpage where JavaScript can draw lines, shapes, and text-->
+		<canvas id="clockCanvas" width="200" height="200"></canvas>
+	</body>
+</html>
