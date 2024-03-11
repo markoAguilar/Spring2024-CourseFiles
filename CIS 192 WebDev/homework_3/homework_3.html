@@ -1,81 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="eng">
-	<head>
-		<meta charset="UTF-8">
-		<title>Homework 3</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 3</title>
+    <!--Below is a favicon. It is a small image typically displayed on the browser tab
+    it is created with the link tag within the head tag-->
+    <link rel="icon" href="pokemon.jpg" />
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
 
-		<style>
-			table, th, td{
-				border: 2px solid red;
-			}
-		</style>
-	</head>
-
-	<body>
-		<!--A section is a collection of related content-->
-		<!--Headings are hierarchical with h1 being the top and h6 being the bottom. Font size and emphasis is assigned accordingly.
+  <body>
+    <!--A section is a collection of related content-->
+    <!--Headings are hierarchical with h1 being the top and h6 being the bottom. Font size and emphasis is assigned accordingly.
 			Further style changes to the headings can be done but only in the CSS page of the website-->
-		<!--Tags should be used based on the meaning that the enclosed content has. And less based on styling.
-			- <cite> title of a work book, song, etc. and is italicized by default
-			- <mark> highlight important things
-			- <b> make the text bold
-			- <i> italics
-			- <u> underlines
-			- <strong> important text
-			- <var> a variable
-			- <kbd> keyboard input
-			- <code> computer code
-			- <samp> sample output from a computer-->
-		<section>
-			<h2>HTML</h2>
-			<ol type="1" style="list-style-type:lower-greek">
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-			</ol>
-		</section>
+    <!--Tags should be used based on the meaning that the enclosed content has. And less based on styling.
+	    - <cite> title of a work book, song, etc. and is italicized by default
+	    - <mark> highlight important things
+	    - <b> make the text bold
+	    - <i> italics
+	    - <u> underlines
+	    - <strong> important text
+	    - <var> a variable
+	    - <kbd> keyboard input
+	    - <code> computer code
+	    - <samp> sample output from a computer-->
 
-		<!-- Tables
-			- The Caption tag gives a table a title
-		-->
-		<table>
-			<caption>Title Of My Table</caption>
-			<thead>
-				<tr>
-					<th>First Column</th>
-					<th>Second Column</th>
-					<th colspan="2">Third Column</th>
-				</tr>
-			</thead>
+    <section>
+      <h2>HTML</h2>
+      <ol type="1" style="list-style-type: lower-greek">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+    </section>
 
-			<tbody>
-				<tr>
-					<td>First data</td>
-					<td>Second data</td>
-					<td>Third data</td>
-					<td rowspan="3">Fourth data</td>
-				</tr>
-			</tbody>
+    <!--Tables-->
+    <!--Notes: 
+	    - The Caption tag gives a table a title
+	    - Styling for the table can be seen above within the style tags
+	    - The <thead>, <tbody>, and <tfoot> tags do not affect the layout
+	    of the table, but browsers may use the tags to enable the table body
+	    to scroll independently of the header and footer or to print the header
+	    and footer on each page of a multi-page table printout
+    -->
 
-			<tfoot>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tfoot>
+    <table>
+      <caption>
+        Title Of My Table
+      </caption>
+      <thead>
+        <tr>
+          <th>First Column</th>
+          <th>Second Column</th>
+          <th colspan="2">Third Column</th>
+        </tr>
+      </thead>
 
-		</table>
+      <tbody>
+        <tr>
+          <td>First data</td>
+          <td>Second data</td>
+          <td>Third data</td>
+          <td rowspan="3">Fourth data</td>
+        </tr>
+      </tbody>
 
-<!--Images-->
-<!--Notes:
-	- There is a title attribute that displays text when hovering over an image
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
 
--->
-		<section>
-			<h2>Practice With Images</h2>
-		</section>
-	</body>
+    <!--Images-->
+    <!--Notes
+	    - There is a title attribute that displays text when hovering over an image
+	    - If only height or width is specified, the images aspect ratio is maintained
+	    ascpect ratios are in the format of width:height
+	    - .jpg and .png images true (24-bit) color however:
+	    	- .jpg compress files using lossy compression, meaning some original
+		picture information is lost when transferring the image.
+		- .png compress files using lossless compression.
+	    - 
+    -->
+    <h2>Practice With Images</h2>
+    <section id="pokemon">
+      <img
+        src="pokemon.jpg"
+        alt="pokemon picture"
+        title="Pokemon Picture&#33;"
+        height="300"
+      />
+    </section>
 
+    <!--LINKS-->
+    <!--Notes:
+	    - The anchor tag <a> is for creating a hyperlink that causes the browser
+    to request the URL assigned to the href attribute. The text between the tag is
+    what is displayed on the webpage.
+    - The href attribute can also be assigned the mailto URL scheme instead which prompts the
+    browser to start an email program and address an email to the given address.
+    	- Other URL schemese are:
+    		- http: unencrypted protocol, a 3rd party can intercept and view sent data
+    		- file: indicates that the browser should look for a file on the user's 
+    		computer and not a server.
+    		- ftp: protocol used to transfer a file from the web server to the web browser.
+		Downloads a data file over the internet
+    		- sftp: encrypter version of ftp
+    - An absolute URL is a complete URL. Ex: <a href="http://example.com/test.html">test</a>
+    is a hyperlink using the absolute URL http://example.com/test.html.
+    - A relative URL specifies the relative path to the web resource with no scheme or hostname.
+    Ex: <a href="test.html">test</a> uses the relative URL test.html to refer to an HTML document
+    on the same website and with the same path as the current HTML document.
+    	- ../ using this in the href argument scheme references a directory one level up
+	use multiple to go up further levels.
+    - -->
+    <a href="https://google.com/">To Google.com</a>
+    <a href="mailto:marco@gmail.com">Send Me An Email&#33;</a>
+    <!--A URL can point to a section, or fragment, of a document by adding a hash tag (#) and a fragment identifier
+	    At the end of the URL. Ex: https://en.wikipedia.org/wiki/Computer_science#History refers to the "History"
+	    section of the "Computer_science" page on Wikipedia.
+
+	    Assigned by itself, points to a section on the same html document
+
+	    At the end of an html value, points to a section on the html doc to be opened
+
+	    Adding the id attribute to any HTML tag creates a fragment identifier, permitting URLs to link directly
+	    to the id's location in the document. Several rules exist for an id value:
+
+	    ID's may be composed of any characters except whitespace characters. Ex: "history 123" is invalid because
+	    is case sensitive. Must be unique in the document. Good practice is to choose id values that start
+	    with a letter and are composed of only letters, digits, dashes (-), and underscores (_). Ex: "history123-late".-->
+    <p>
+      Links To Sections On This Page:
+      <a href="#pokemon">Pokemon Section</a>
+      <a href="#ch2">Chapter 2</a>
+    </p>
+
+    <section id="superSmash">
+      <p>Images can also be hyperlinked&#33;</p>
+      <p><br /><b>Click The Image To View Some Wallpapers&#33;</b></p>
+      <!--The target attribute of the anchor tag can be assigned to:
+      - _self the link will open in the same tab or window
+      - _blank the link will open in a new tab or window
+      - can be used in the img tag as well-->
+      <a
+        target="_blank"
+        href="https://www.google.com/search?q=super+smash+bros+wallpaper&newwindow=1&client=safari&sca_esv=1a8ff9d288a21f85&udm=2&biw=1199&bih=797&sxsrf=ACQVn08EhjZZDHUahSVxbFPH1uzv_kMWaQ%3A1710127658713&ei=KnruZaGNK47MkPIPmqOxoAg&ved=0ahUKEwihyvj8oeuEAxUOJkQIHZpRDIQQ4dUDCA8&uact=5&oq=super+smash+bros+wallpaper&gs_lp=Egxnd3Mtd2l6LXNlcnAiGnN1cGVyIHNtYXNoIGJyb3Mgd2FsbHBhcGVyMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjfElCeBViWEXABeACQAQCYATqgAZUEqgECMTC4AQPIAQD4AQGYAgugArgEwgINEAAYgAQYigUYQxixA8ICCBAAGIAEGLEDwgIKEAAYgAQYigUYQ5gDAIgGAZIHAjExoAfcOg&sclient=gws-wiz-serp"
+        ><img
+          src="superSmash.jpg"
+          alt="Picture of Super Smash Bros"
+          title="Super Smash Wallpapers&#33;"
+          height="350"
+      /></a>
+    </section>
+
+    <!--Special Characters-->
+    <section id="specialCharacters">
+      <h2>Special Characters &#128512;</h2>
+      <p>
+        An entity is a mechanism for writing special characters or symbols in
+        HTML<br />
+        They are defined between an ampersand and a semicolon and either have a
+        name, a #number or a #hexadecimalNumber
+      </p>
+      <br />
+      <p>&lt; &gt; &amp; &#33; &#8209; 5&nbsp;km &mdash;</p>
+    </section>
+  </body>
 </html>
