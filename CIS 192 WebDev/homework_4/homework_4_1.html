@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 4</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework&nbsp;4</h1>
+      <h2>Containers</h2>
+    </header>
+
+    <main>
+      <!-- Section Links -->
+      <section id="sectionLinks">
+        <h3>Links:</h3>
+        <a href="#containersAndParent"
+          >Containers&nbsp;&amp;&nbsp;Parent&nbsp;Containers</a
+        ><br />
+        <a href="#blockElement">Block&nbsp;Elements</a><br />
+        <a href="#inlineElement">Inline&nbsp;Elements</a><br />
+        <a href="#blockVsInline">Block&nbsp;Vs&#46;Inline</a><br />
+      </section>
+
+      <!-- Containers And Parent Containers -->
+      <section id="containersAndParent">
+        <h3>Containers And Parent Containers</h3>
+        <p>
+          A container is any html tag in the body of an html document&#46;
+          Developers use these to assist in<br />
+          organizing and formatting content&#46;<br />
+        </p>
+        <p>
+          In the table below, the <b>&lt;ol&gt;</b> container would be the
+          parent of the list elements&#46;<br />
+          However it would not be the parent to the
+          <b>&lt;img&gt;</b> elements&#46;That would be the
+          <b>&lt;li&gt;</b> container&#33;<br />Further note that the image tag
+          is not a container since it does not have a closing tag&#33;
+        </p>
+        <ol>
+          <li><img src="George-Washington.jpg" alt="George Washington" /></li>
+          <li><img src="John-Adams.jpg" alt="John Adams" /></li>
+          <li><img src="Thomas Jefferson.jpg" alt="Thomas Jefferson" /></li>
+        </ol>
+      </section>
+
+      <!-- Block Elements -->
+      <section id="blockElement">
+        <h3>Block Elements</h3>
+        <p>
+          A <strong>block element</strong>
+          <em>fills the width of the elements parent container</em> and can
+          container other block elements&#44; inline elements&#44; and
+          text&#46;<br />Block elements include &lt;h1&gt;&#44;
+          &lt;table&gt;&#44; and &lt;p&gt;&#46; The p element cannot contain
+          another p element because the semantics are unclear&#46;
+        </p>
+        <p>
+          The &lt;div&gt; container tag is the only block element with no
+          semantic meaning&#46; It is a generic element for creating block
+          containers for presentational and functional purposes&#46;The
+          following HTML breaks up a document into logical components use a
+          &lt;div&gt; tag for each component&#46;
+        </p>
+        <div>
+          &lt;body&gt;<br />&lt;div&gt;
+          <div>Logo and headline elements</div>
+          &lt;&#47;div&gt; <br />
+          &lt;div&gt;
+          <div>Navigational elements</div>
+          &lt;&#47;div&gt; <br />&lt;div&gt;
+          <div>Main content</div>
+          &lt;&#47;div&gt; <br />&lt;div&gt;
+          <div>Footer and legal</div>
+          &lt;&#47;div&gt;<br />
+          &lt;&#47;body&gt;
+        </div>
+      </section>
+
+      <!--Inline Elements -->
+      <section id="inlineElement">
+        <h3>Inline Elements</h3>
+        <p>
+          An <strong>inline element</strong> fills the minimum space possible in
+          the elements&#39;s parent container and
+          <strong>can only contain text or other inline elements</strong>&#46;
+          Inline elements <strong>do not have closing tags</strong>&#46; An
+          example of an inline element is the &lt;a&gt; tag&#46; It creates a
+          hyperlink container to hold the link and the hyperlink does not fill
+          the width or height of the link&#39;s parent paragraph&#46;
+        </p>
+        <p>
+          The &lt;span&gt; element is a generic inline element&#46; Unlike other
+          inline elements, such as &lt;a&gt; and &lt;em&gt;&#46;
+        </p>
+        <p>
+          Since div and span do not have semantic meaning&#44; they are used
+          primarily for presentation and interaction purposes&#46; Good practice
+          is to use these tags as a last resort&#46; Attempt to use tags such as
+          &lt;address&gt; or &lt;article&gt; where appropriate and possible&#46;
+        </p>
+        <p>
+          This pargraph breaks up sentences using <strong>&lt;span&gt;</strong>
+          tags for each component&#46; To further illustrate&#44; inline styling
+          has been added to each &lt;span&gt; in this paragraph&#46;
+          <span style="background: lightblue"
+            >Now we are engaged in a great civil war testing whether that
+            nation, or any nation so conceived and so dedicated, can long
+            endure.</span
+          >
+          <span style="background: lightgray; color: red"
+            >We are met on a great battle-field of that war.</span
+          >
+          <span style="background: lightgreen"
+            >We have come to dedicate a portion of that field, as a final
+            resting place for those who here gave their lives that that nation
+            might live.</span
+          >
+          <span style="background: orange"
+            >It is altogether fitting and proper that we should do this.</span
+          >
+        </p>
+      </section>
+
+      <!-- Block Vs. Inline -->
+      <section id="blockVsInline">
+        <p>
+          The difference between block and inline elements is visible in
+          Chrome&#39;s DevTools&#46; As we have stated before, block elements
+          will fill the width of the elements parent container and inline
+          elements will only fill in as little space as possible&#46;
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <h3>End of Topic&#33;</h3>
+      <a href="#">Back To Top</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html!>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 4 Part 4</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework 4&#58; Part 4</h1>
+      <h2>Additional Form Widgets</h2>
+    </header>
+
+    <main>
+      <!-- Date Picker -->
+      <section id="datePicker">
+        <h3>Date Picker&#58;</h3>
+        <ul>
+          <li>
+            Date picker is an <strong>input element</strong> set by the
+            <strong>input attribute &#34;date&#34;</strong>
+          </li>
+          <li>
+            Two common <strong>date attributes</strong> are
+            <strong>max&#40;furthest date permitted&#41;</strong> and
+            <strong>min&#40;earliest date permitted&#41;</strong>&#46; values
+            for these attributes must be in the form
+            &#34;yyyy&#45;mm&#45;dd&#34;
+          </li>
+        </ul>
+        <form action="https://www.google.com/" method="POST" target="_blank">
+          <input type="date" min="2024-10-01" max="2024-10-31" />
+          <input type="submit" value="Reserve" name="reserve" id="reserve" />
+        </form>
+      </section>
+
+      <!-- Color Picker -->
+      <section id="colorPicker">
+        <h3>Color Picker&#58;</h3>
+        <ul>
+          <li>
+            Color picker is an <strong>input element</strong> set by the
+            <strong>input attribute &#34;color&#34;</strong>
+          </li>
+        </ul>
+        <form action="https://www.google.com/" method="POST" target="_blank">
+          <input type="color" />
+          <input
+            type="submit"
+            id="submitColor"
+            name="submitColor"
+            value="Choose Color"
+          />
+        </form>
+      </section>
+
+      <!-- Number Input -->
+      <section id="numberInput">
+        <h3>Number Input&#58;</h3>
+        <ul>
+          <li>
+            Number Input is an <strong>input element</strong> set by the
+            <strong>input attribute &#34;number&#34;</strong>
+          </li>
+          <li>
+            Two common <strong>number attributes</strong> are
+            <strong>max&#40;max number&#41;</strong> and
+            <strong>min&#40;min number&#41;</strong>
+          </li>
+        </ul>
+        <form target="_blank" method="POST" action="https://www.google.com">
+          <p>Enter a number from 0&#45;100&#58;</p>
+          <input type="number" min="0" max="100" />
+          <input type="submit" name="number" id="number" value="Submit" />
+        </form>
+      </section>
+
+      <!-- Range Input -->
+      <section id="Range Input">
+        <h3>Range&#58;</h3>
+        <ul>
+          <li>
+            Range Input is an <strong>input element</strong> set by the
+            <strong>input attribute &#34;range&#34;</strong>
+          </li>
+          <li>
+            3 common <strong>range attributes</strong> are
+            <strong>max&#40;max number&#41;</strong> &#44;
+            <strong>min&#40;min number&#41;</strong> and
+            <strong>value&#40;idk yet&#41;</strong>
+          </li>
+        </ul>
+        <form target="_blank" method="POST" action="https://www.google.com">
+          <p>Select a number from 0&#45;100&#58;</p>
+          <input type="range" min="0" max="100" step="2" value="50" />
+          <input type="submit" name="number" id="range" value="Submit" />
+        </form>
+      </section>
+
+      <!-- Combo Box -->
+      <section id="comboBox">
+        <h3>Combo Box&#58;</h3>
+        <ul>
+          <li>
+            A <strong>combo box</strong> is the combination of text box and
+            drop&#45;down menu all in one widget&#46;
+          </li>
+          <li>
+            <strong>An &#60;input&#62;</strong> element&#44; with a
+            <strong>list attribute</strong> and list attribute value of
+            <strong>&#34;idOfDatalistContainer&#34;</strong>
+          </li>
+          <li>
+            A <strong>&#60;datalist&#62; container</strong> with included
+            <strong>&#60;option&#62;</strong> elements
+          </li>
+        </ul>
+        <form target="_blank" action="https://www.google.com/" method="POST">
+          <input list="colors" />
+          <datalist id="colors">
+            <option value="Red"></option>
+            <option value="Blue"></option>
+            <option value="Purple"></option>
+            <option value="Green"></option>
+            <option value="Orange"></option>
+            <option value="Yellow"></option>
+          </datalist>
+        </form>
+      </section>
+
+      <!-- Special Input Text-->
+      <section id="specialText">
+        <h3>Special Input Text</h3>
+        <ul>
+          <li>
+            Four <strong>&#60;input&#62;</strong> element types exist for
+            entering special text&#58;
+          </li>
+          <ul>
+            <li>
+              type&#61;&#34;<strong>url</strong>&#34; for typing in a
+              URL&#58;<br />
+              <input type="url" placeholder="somethin" />
+            </li>
+            <li>
+              type&#61;&#34;<strong>tel</strong>&#34; for typing in a phone
+              number
+            </li>
+            <input
+              type="tel"
+              placeholder="&#35;&#35;&#35;&#45;&#35;&#35;&#35;&#45;&#35;&#35;&#35;&#35;"
+            />
+            <li>
+              type&#61;&#34;<strong>email</strong>&#34; for typing in an
+              email<br />
+              <input type="email" placeholder="name@domain&#46;com" />
+            </li>
+            <li>
+              type&#61;&#34;<strong>search</strong>&#34; for typing in search
+              terms<br />
+              <input
+                type="search"
+                placeholder="Something really cool"
+                required
+              />
+            </li>
+          </ul>
+        </ul>
+        <p>
+          <strong
+            >It is important to specify what input element to use for each type
+            of text being requested&#46; Some browsers display different
+            keyboard layouts for users</strong
+          >
+        </p>
+        <p>other input attributes include&#58;</p>
+        <ul>
+          <li>
+            <strong>pattern</strong>&#58; also known as a regular
+            expression&#46; Specifies the pattern that the users input must
+            follow&#46; Learn more about Regular Expressions
+            <a
+              target="_blank"
+              href="https://www.google.com/search?q=Regex+expressions"
+              >here</a
+            >
+          </li>
+          <li>
+            <strong>required</strong>&#58; no value assigned&#44; the field
+            cannot be left empty if <strong>required</strong> is present
+          </li>
+          <li>
+            <strong>step</strong>&#58; sets the amount by which the value
+            changes&#46; for a <strong>range</strong> input element for example
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

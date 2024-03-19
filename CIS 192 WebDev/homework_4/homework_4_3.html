@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 4 Part 3</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework 4&#58; More HTML</h1>
+      <h2>Part 3&#58; Common Form Widgets</h2>
+    </header>
+
+    <main>
+      <!-- Checkbox -->
+      <section id="checkbox">
+        <p>
+          A <strong>checkbox</strong> input element initially appears selected
+          if the <strong>checked attribute</strong> is set&#46; The checked
+          attribute is an example of a <strong>boolean attribute</strong> which
+          is true if it is present and false if it is absent&#33; No value must
+          be assigned to a boolean attribute&#33;
+        </p>
+        <p>
+          For each checkbox selected&#44; the browser sends the checkbox&#39;s
+          name and value to the server&#46;
+          <strong>value attribute</strong> default is &#34;on&#34;&#46; If a
+          checkbox is not selected&#44; the browser does not send anything to
+          the server which is a common error for servers since it fails to
+          record all checkboxes&#46;
+        </p>
+        <p>
+          <strong
+            ><em
+              >Good practice is to use label elements with checkboxes so the
+              user can click the label to check and uncheck the associated
+              checkbox&#46; Try it out below&#33;</em
+            ></strong
+          >
+        </p>
+        <form action="https&#58;&#47;&#47;example&#46;com&#47;survey">
+          <p>
+            <label for="item1">Item 1&#58;</label>
+            <input type="checkbox" name="item1" id="item1" />
+          </p>
+          <p>
+            <label for="item2">Item 2&#58;</label>
+            <input type="checkbox" name="item2" id="item2" />
+          </p>
+          <input type="submit" />
+        </form>
+      </section>
+
+      <!-- Radio Button -->
+      <section>
+        <h3>Radio Button</h3>
+        <p>
+          A <strong>radio button</strong> is a widget for input elements with
+          the type attribute <strong>&#34;radio&#34;</strong>&#44; which allows
+          users to select exactly one value from possibly many values&#46; The
+          web browser groups radio buttons together with the same
+          <strong>name</strong> attribute&#44; where each possible value in a
+          group has an associated input&#46; When submitting a form&#46; the
+          browser sends the selected radio button&#39;s
+          <strong>name</strong> and <strong>value</strong> attribute&#46;
+          Ex&#58; If the radio button
+          <strong
+            >&#60;input type&#61;&#34;radio&#34; name&#61;&#34;movie&#34;
+            value&#61;&#34;ET&#34;&#62; is selected&#44; &#34;movie&#61;ET&#34;
+            is sent to the server&#46;</strong
+          >
+        </p>
+
+        <p>
+          <strong
+            ><em
+              >The main difference between radio and checkbox is that only one
+              radio button in a group can be selected&#44; while any number of
+              checkboxes can be selected&#46; Furthermore&#44; the browser
+              requires one radio button always be slected form that group&#46;
+              Therefore&#44; the browser will minimally send the selected radio
+              button if any&#46;
+              <span style="background: lightgray; color: red"
+                >Try It Below&#33;</span
+              >&#46;</em
+            ></strong
+          >
+        </p>
+        <form
+          method="POST"
+          target="_blank"
+          action="https://www.google.com/restaurants"
+        >
+          <p>Select your favorite movie&#58;</p>
+          <div>
+            <input type="radio" name="movies" value="Scream 1" id="scream1" />
+            <label for="scream1">Scream 1</label>
+          </div>
+          <div>
+            <input type="radio" name="movies" value="Scream 2" id="scream2" />
+            <label for="scream2">Scream 2</label>
+          </div>
+          <div>
+            <input type="radio" name="movies" value="Scream 3" id="scream3" />
+            <label for="scream3">Scream 3</label>
+          </div>
+        </form>
+      </section>
+
+      <!-- Drop-down Menu-->
+      <section id="dropDownMenu">
+        <h3>Drop&#45;Down Menu</h3>
+        <p>
+          The <strong>&#60;select&#62;</strong> container creates a
+          <strong>drop&#45;down menu</strong> or list&#44; which allows user to
+          select one of several predefined values&#46; The
+          <strong>&#60;option&#62;</strong> container creates a value&#44; or
+          option&#44; the user can select within a drop&#45;down menu&#46; When
+          the user is not interacting with the menu&#44; the drop&#45;down menu
+          usually displays the selected option&#46;
+        </p>
+        <p>
+          The difference between a drop&#45;down menu and a radio button is that
+          the drop&#45;down menu only displays the options when interacting with
+          the user&#44; while a radio button always displays all options&#46;
+        </p>
+        <select name="videoGames">
+          <option value="pokemon">Pokemon&#58; Legends Arceus</option>
+          <option value="mortalKombat">Mortal Kombat&#58; Shaolin Monks</option>
+          <option value="superSmash">Super Smash Bros&#46;</option>
+          <option value="rocketLeague">Rocket League</option>
+        </select>
+      </section>
+
+      <!-- List Box -->
+      <section id="listBox">
+        <h3>List Box</h3>
+        <p>
+          A <strong>list box</strong> widget is created by specifying a size
+          with the select element's <strong>size</strong> attribute&#46; Ex&#58;
+          &#60;select size&#61;&#34;4&#34;&#62; creates a list box that shows
+          four options at a time&#46; If the list box contains more than
+          <strong>size</strong> options&#44; the browser adds a vertical
+          scrollbar so the user can scroll through the list of options&#46;
+        </p>
+        <p>
+          The <strong>multiple</strong> attribute allows the user to select
+          multiple options&#46; On windows&#44; the user must hold down the
+          control button to select multiple options&#44; and on a Mac&#44; the
+          user must hold down the command button&#46; Many users are unaware of
+          this so best practice is to use checkboxes in that case&#46;
+        </p>
+        <select name="colors" size="4" multiple>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+        </select>
+      </section>
+      <!-- Buttons -->
+      <section id="buttons">
+        <h3>Buttons</h3>
+        <ul type="square">
+          <li>Is a <strong>container</strong></li>
+          <li>
+            Can also be created using the <strong>&#60;input&#62;</strong> tag
+            and <strong>type attribute</strong> of
+            <strong>&#34;button&#34;</strong>
+            <ul>
+              <li>
+                However&#44; the input element button only allows text
+                display&#46; While the button element allows both text &amp;
+                images
+              </li>
+            </ul>
+          </li>
+          <li>
+            Button element has <strong>type attribute</strong> values like&#58;
+            <ul>
+              <li>
+                &#34;button&#34;&#58; typically used with javascript to perform
+                an
+              </li>
+              <li>
+                action or &#34;submit&#34;&#58; typically used to submit forms
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!--button-->
+        <button type="button">
+          <img
+            height="100"
+            src="home.png"
+            alt="home button"
+            title="To Home&#33;"
+          />
+          <br />
+          <strong>Home</strong>
+        </button>
+      </section>
+
+      <!-- Password Field-->
+      <section id="passwordField">
+        <h3>Password Field&#58;</h3>
+        <ul>
+          <li>
+            a <strong>password field</strong> is a widget element for the
+            <strong>&#60;input&#62; tag</strong>
+          </li>
+          <li>
+            set with &#60;input&#62; <strong>type attribute</strong> value of
+            <strong>&#34;password&#34;</strong>
+          </li>
+          <li>
+            <strong
+              >forms that submit sensitive data should always submit with
+              URL&#39;s that use HTTPS</strong
+            >
+          </li>
+          <li>
+            <strong>size and maxlength attributes</strong> are used to set the
+            maximum display size and the maximum amount of characters allowed
+            for an entered password&#44; respectively&#46;<br />The same
+            attributes can be set for for text boxes as well&#33;
+          </li>
+        </ul>
+        <p>
+          Enter a 10 character password&#58;
+          <input type="password" name="testPass" size="6" maxlength="10" />
+        </p>
+      </section>
+      <section id="fieldSet">
+        <h3>Fieldset&#58;</h3>
+        <ul>
+          <li>
+            Groups related form widgets together and draws a box around the
+            related widgets
+          </li>
+          <li>
+            <strong>&#60;legend&#62;</strong> container makes a caption for the
+            fieldset element
+          </li>
+        </ul>
+        <fieldset id="colorsSet">
+          <legend>Colors&#33;</legend>
+          <input type="radio" name="blue" value="Blue" id="blueRad" />
+          <label for="blueRad">Blue</label>
+          <input type="radio" name="red" value="Red" id="redRad" />
+          <label for="redRad">Red</label>
+          <input type="radio" name="yellow" value="Yellow" id="yellowRad" />
+          <label for="yellowRad">Yellow</label>
+          <input type="radio" name="purple" value="Purple" id="purpleRad" />
+          <label for="purpleRad">Purple</label>
+        </fieldset>
+      </section>
+    </main>
+    <footer>
+      <p>
+        End of Topic&#33;<br />
+        <a href="#">Back To Top</a>
+      </p>
+    </footer>
+  </body>
+</html>

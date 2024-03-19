@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 4 Part 2</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework&nbsp;4&nbsp;Part&#58;&nbsp;2</h1>
+      <h2>Forms</h2>
+      <img
+        height="400"
+        src="chromeDevToolsPOSTrequest.png"
+        alt="Dev Tools POST request"
+        title="Dev Tools Post Request"
+      />
+      <section id="sectionLinks">
+        Page Links&#58;<br />
+        <a href="#formTag">The Form Tag</a><br />
+        <a href="#getMethod">The GET Method</a><br />
+        <a href="#postMethod">The POST Method</a><br />
+        <a href="#formWidgets">Form Widgets</a><br />
+      </section>
+    </header>
+
+    <main>
+      <!-- The Form Tag -->
+      <section id="formTag">
+        <h3><strong>&lt;form&gt; tag</strong></h3>
+        <p>
+          The <strong>&lt;form&gt;</strong> tag allows the web browser to submit
+          information from the user to the server. The &lt;form&gt; tag has two
+          primary attributes&#58;
+        </p>
+        <ol type="1">
+          <li>
+            The <strong>action attribute</strong> indicates the URL where the
+            form data should be sent&#46; Typically the URl uses HTTPS so the
+            form data is encrypted.
+          </li>
+          <li>
+            The <strong>method attribute</strong> indicates the HTTP request
+            type the browser will use to communicate with the server&#46; The
+            method is either GET (default) or POST&#46;
+          </li>
+        </ol>
+      </section>
+
+      <!-- Get Method-->
+      <section id="getMethod">
+        <h3>The Get Method</h3>
+        <p>
+          The <strong>GET Method</strong> is a technique used by a web browser
+          to submit information to a web server by altering the URL of the HTTP
+          request&#46;When a user clicks the submit button in a form that
+          <strong>uses the GET method</strong>&#44; the browser does&#58;
+        </p>
+        <ol type="1">
+          <li>
+            Collect all data from the form fields into a
+            <strong>query string</strong>&#46;The
+            <strong>query string</strong> is a set of
+            <strong>name=value</strong> pairs separated by an &amp;&#46; Each
+            name is specified as an attribute of the HTML field, and the value
+            is the user&dash;entered data.
+          </li>
+          <li>
+            Create a URL with the server page and name=value pairs&#46; The URL
+            is composed of the action attribute specified in the form, the
+            <strong>question mark &#63;</strong> character, and the query
+            string&#46; EX&#58;<br />http&#58;&#47;&#47;example&#46;com&#47;apply&#63;first=Rick&amp;last=Deckard
+          </li>
+          <li>
+            Use the newly created URL to create and send an HTTP GET request
+          </li>
+          <li>
+            Display or update the webpage using the HTTP resonse recieved from
+            the server
+          </li>
+        </ol>
+      </section>
+
+      <!--The Post Method-->
+      <section id="postMethod">
+        <h3>The Post Method</h3>
+        <p>
+          The <strong>post method</strong> is a technique used by a web browser
+          to submit information to a web server by sending the information in
+          the HTTP request body&#46; When the user clicks the submit button in a
+          form that <strong>uses the POST method</strong>&#58;
+        </p>
+        <ol type="1">
+          <li>
+            The browser creates an HTTP POST request using the URL from the
+            form's action attribute
+          </li>
+          <li>
+            Creates a query string from the form data&#46; Ex&#58;
+            first&#61;Sarah&amp;last&#61;Connor
+          </li>
+          <li>
+            Place the query string in the HTTP request message body&#44; and
+            send the request
+          </li>
+          <li>
+            Display or update the webpage using the HTTP response recieved from
+            the server
+          </li>
+        </ol>
+
+        <p>
+          If a form field contains
+          <strong>binary data such as an image</strong>&#44; the normal format
+          of the query string discussed before is not sufficient to encode the
+          binary data&#46; A <strong>POST</strong> request can be split into
+          <strong>multiple part</strong>&#46; The
+          <strong>&lt;form&gt;</strong> tag&#39;s
+          <strong>enctype attribute</strong> value
+          <strong><em>mutlipart&#47;form&dash;data</em></strong> indicates the
+          web browser should split a POST request into multiple parts where each
+          <strong>input field</strong> is sent as a separate part of the HTTP
+          request message&#46;
+        </p>
+
+        <h4>Escaping Form Data</h4>
+        <p>
+          The &#38;&#44; &#63;&#44; and &#61; characters have special meaning in
+          a query string&#46; If a user enters characters like these or
+          whitespace characters like space&#44; newline&#44; or tab&#44; the
+          characters must be <strong>escaped</strong>&#46; The browser rules for
+          escaping form data are&#58;
+        </p>
+        <ul>
+          <li>For spaces use <strong>&#43;</strong></li>
+          <li>
+            All other reservered characters&#44; newline&#44; and tab use
+            <strong>&#37;XX</strong><br />where XX is the ASCII hex value of the
+            character
+          </li>
+        </ul>
+        <p>
+          For example&#44; if &#34;1 &#43; 2 &#61; &#63;&#34; is entered into a
+          textbox&#44; the browser excapes the values producing
+          &#34;1&#43;&#37;2B&#43;2&#43;&#37;3D&#43;&#37;3F&#34;&#46; 2B is the
+          ASCII hex value for &#34;&#43;&#34;&#44; 3D is the ASCII value for
+          &#34;&#61;&#34;&#44; and 3F is the ASCII value for &#34;&#63;&#34;
+        </p>
+      </section>
+
+      <!-- Form Widgets -->
+      <section id="formWidgets">
+        <h3>Form Widgets</h3>
+        <p>
+          A <strong>widget</strong> is an interactive component that the browser
+          uses to interact with a user&#46; Ex&#58; Buttons&#44; drop&dash;down
+          menus&#44; and data entry fields&#46;<br />
+        </p>
+        <p>
+          The <strong>&#60;input&#62;</strong> tag allows the user to enter
+          information into a webpage and does not have a closing tag&#46; The
+          input tag has 5 primary attributes&#58;
+        </p>
+        <ul>
+          <li>
+            The <strong>type attribute</strong> indicates the widget type&#46;
+            Common values include &#34;text&#34;&#44; &#34;password&#34;&#44;
+            &#34;submit&#34;&#44; &#34;radio&#34;&#44; &#34;checkbox&#34;&#44;
+            and &#34;button&#34;&#46;
+          </li>
+          <li>
+            The <strong>name attribute</strong> names the widget and
+            <strong>sends the widget&#39;s value</strong> when the widget&#44;s
+            form is submitted
+          </li>
+          <li>
+            The <strong>id attribute</strong> is used to give the widget a
+            unique <strong>identifier</strong>
+          </li>
+          <li>
+            The <strong>placeholder attribute</strong> specifies text that first
+            appears in a text widget&#44; typically for giving the user a hint
+            as to what to enter as a value
+          </li>
+          <li>
+            The <strong>value attribute</strong> specifies a
+            <strong>default value</strong> for a widget such as a submit button
+            widget
+          </li>
+        </ul>
+
+        <!-- Note how you can still set the target attribute for a form-->
+        <form action="https://twitter.com/status" method="POST" target="_blank">
+          <input
+            type="text"
+            name="status"
+            id="status"
+            placeholder="How are you feeling today&#63;"
+          />
+          <input
+            type="submit"
+            name="statusSubmit"
+            id="statusSubmit"
+            value="Send Status"
+          />
+        </form>
+      </section>
+
+      <!-- Labels And Text Areas-->
+      <section id="labelsTextAreas">
+        <h3>Labels And Text Areas</h3>
+        <p>
+          The <strong>&#60;label&#62;</strong> tag displays descriptive text
+          associated with a specific widget&#46; A label has a
+          <strong>for attribute</strong> whose value should match the
+          <em>id</em> attribute for the widget being labeled&#46; Labels help
+          people using screen readers understand what input is expected&#46;
+        </p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" />
+        <p>
+          A <strong>text area</strong> widget is an input element specified by
+          <strong>&#60;textarea&#63;</strong> opening and closing tags that
+          allows users to enter multiple lines of text&#46; A &#60;textarea&#62;
+          tag has optional <strong>rows</strong> and
+          <strong>cols</strong> attributes to specify the intitial size of the
+          text area&#46;
+        </p>
+        <textarea name="summary" rows="4" cols="50">To summarize...</textarea>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#">Back To Top</a>
+    </footer>
+  </body>
+</html>
