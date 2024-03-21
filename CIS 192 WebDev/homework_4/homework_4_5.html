@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 4 Part 5</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework 4&#58; Part 5</h1>
+      <h2>Audio And Video&#33;</h2>
+      <p>Section Links&#58;<br>
+      <a href="#audioElement">Audio Element</a><br>
+      <a href="#videoElement">Video Element</a><br>
+      <a href="#youTubeVideos">YouTube Videos</a><br>
+      </p>
+    </header>
+
+    <main>
+      <!-- Audio Element-->
+      <section id="audioElement">
+        <h3>Audio Element</h3>
+        <audio controls>
+          <source src="idk.mp3" />
+        </audio>
+        <p>
+          The <strong>&#60;audio&#62; container</strong> plays an audio file
+          within a webpage&#46; It contains within it a
+          <strong>&#60;source&#62; element</strong> with the value of its
+          <strong>src attribute</strong> set to the location of the audio source
+          to play&#46;
+        </p>
+
+        <p>Common <strong>&#60;audio&#62; attributes</strong> include&#58;</p>
+        <ul>
+          <li>
+            <strong>autoplay</strong>&#58; boolean&#44; makes the audio play
+            automatically
+          </li>
+          <li>
+            <strong>controls</strong>&#58; boolean&#44; displays audio controls
+            for user to pause&#44; play&#44; and control volume&#46;<strong
+              >If not present&#44; user cannot pause or control
+              audio&#33;</strong
+            >
+          </li>
+          <li>
+            <strong>loop</strong>&#58; boolean&#44; replays audio at end of
+            audio
+          </li>
+          <li>
+            <strong>muted</strong>&#58; boolean&#44; initially mutes the audio
+          </li>
+          <li style="background: lightgray; color: red">
+            Note&#58; since the above are all boolean attributes they are either
+            true when present and false when absent
+          </li>
+        </ul>
+        <p>
+          Important notes&#58; some browsers may not allow audio to play
+          automatically regarnding user settings since some users do not prefer
+          autoplay&#33; Furthermore&#44; developers used to use &#60;embed&#62;
+          and &#60;object&#62; elements to embed audio in a webpage. These would
+          require a plug&#45;in however to play such as Flashplayer to play
+          flash files&#46; But&#44; plug&#45;ins are a source of security risks
+          and some browser have thus stopped supporting some plugins&#46;
+        </p>
+        <h4>Common Audio Formats</h4>
+        <p>
+          Different web browsers support different audio formats&#46;
+          <strong>Multiple &#60;source&#62; elements</strong> can be used to
+          support alternate formats&#46;
+        </p>
+        <ul>
+          <li>
+            <strong>AAC</strong>&#58; Advanced audio coding&#44;
+            &#40;&#46;aac&#41; designed to be the succesor to mp3 with better
+            qualityi <strong>popular</strong>
+          </li>
+          <li>
+            <strong>MP3</strong>&#58; &#40;&#46;mp3&#41;&#44; the sound portion
+            of a MPEG file&#46; widest support&#44;
+            <strong>most popular</strong>
+          </li>
+          <li>
+            <strong>Ogg Vorbis</strong>&#58; &#40;&#46;ogg&#41;&#44;
+            open&#45;source audio coding format developed by Xiph&#46;org
+          </li>
+          <li>
+            <strong>Wave</strong>&#58; &#40;&#46;wav&#41;&#44; developed by IBM
+            and Microsoft&#44; mainly for storing uncompressed audio on windows
+          </li>
+        </ul>
+      </section>
+
+      <!-- Video Element -->
+      <section id="videoElement">
+        <h3>Video Element</h3>
+        <video autoplay muted width="500px">
+          <source src="idk.mov" />
+        </video>
+        <p>
+          Just like the &#60;audio&#62; container&#44; the
+          <strong>&#60;video&#62; container</strong> contains a
+          <strong>&#60;source&#62; element</strong> whose
+          <strong> src attribute</strong> is assigned the location of the video
+          file to play
+        </p>
+
+        <p>
+          Some common <strong>&#60;video&#62;</strong> attributes include&#58;
+        </p>
+        <ul>
+          <li>
+            All the boolean attributes of an
+            <strong>&#60;audio&#62;</strong> container
+          </li>
+          <li>
+            <strong>width</strong>&#58; specifies the pixel width of the
+            video&#39;s display
+          </li>
+        </ul>
+        <p>
+          <span style="background: lightgray; color: red"
+            >Note that some browsers will not play a video automatically
+            <strong>unless</strong> it is muted&#33;</span
+          >
+        </p>
+        <h4>Common Video Formats</h4>
+        <p>
+          Different web browsers support different video formats&#46;
+          <strong>Multiple &#60;source&#62; elements</strong> can be used to
+          support alternate formats&#46;
+        </p>
+        <ul>
+          <li>
+            <strong>MPEG&#45;4 or MP4</strong>&#58; &#40;&#46;m4A&#44;
+            &#46;mp4&#41;&#44; m4A is audio only
+          </li>
+          <li>
+            <strong>Ogg Theora</strong>&#58; &#40;&#46;ogg&#44; &#46;ogv&#44;
+            &#46;ogm&#41;&#44; open video compression format developed by
+            Xiph&#46;org foundation
+          </li>
+          <li>
+            <strong>WebM</strong>&#58; &40;&#46;webm&#41;&#44; open media format
+            developed by Mozilla&#44; Opera&#44; Adobe&#46; and Google for the
+            web
+          </li>
+        </ul>
+        <p>
+          Video playback can be controlled through Javascript as well&#33; Click
+          <strong
+            ><a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"
+              >Here</a
+            ></strong
+          >
+          to learn more&#33;
+        </p>
+      </section>
+
+      <section id="youTubeVideos">
+        <h3>Showing YouTube Videos&#33;</h3>
+        <p>Watch this funny video!</p>
+        <iframe
+          width="460"
+          height="250"
+          src="https://www.youtube.com/embed/7g7kP_Trp0g?rel=0"
+        >
+        </iframe>
+        <p>
+          The <strong>&#60;iframe&#62; container</strong> allows a webpage to be
+          embedded in a rectangular area of the current webpage&#46; It is
+          through this embedding that a YouTube video may be played&#33;<br />The
+          &#60;iframe&#62; container has <strong>attributes</strong>&#58;
+        </p>
+        <ul>
+          <li>
+            <strong>src</strong>&#58; assigned the location of the video to be
+            played&#46; Note that this means the &#60;iframe&#62; container does
+            not need a &#60;source&#62; element
+          </li>
+          <li>
+            <strong>height</strong> and <strong>width</strong>&#58; self
+            explanatory
+          </li>
+          <li>
+            <strong>allow</strong>&#58; assign the value
+            <strong>&#34;autoplay&#34;</strong> to autoplay the video
+            <ul>
+              <li>
+                <span style="background: lightgray; color: red"
+                  >Note however that sometimes this may not work and you would
+                  thus need to append <strong>&#38;autoplay&#61;1</strong> to
+                  the end of the arguments in the URL</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Visit the YouTube help pages for learning how to
+          <strong
+            ><a href="https://support.google.com/youtube/answer/57407?hl=en"
+              >upload</a
+            >
+            and
+            <a href="https://support.google.com/youtube/answer/171780?hl=en"
+              >embedd</a
+            ></strong
+          >
+          a YouTube video&#33;
+        </p>
+      </section>
+
+      <!-- Insert the other links here too! -->
+      <footer>
+	      <p>Further Exploration
+	      <ul>
+		      <li><a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">HTML Video</a></li>
+		      <li><a href="https://www.w3schools.com/html/html5_audio.asp" target="_blank">HTML Audio</a></li>
+		      <li><a href="https://www.w3schools.com/html/html_object.asp" target="_blank">HTML Plug&#45;Ins</a></li>
+		      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats" target="_blank">Supported Media Formats By HTML Elements</a></li>
+		      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement" target="_blank">HTMLMediaElement</a></li>
+	      </ul>
+	      </p>
+        <p>End of topic&#33; <a href="#">Back To Top</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
