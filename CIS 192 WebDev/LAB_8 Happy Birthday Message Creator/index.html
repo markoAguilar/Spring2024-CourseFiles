@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <!--The form should:
+
+Use the regular expression [a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)* for the email address <input> to verify the user enters what looks to be an email address
+
+Use a date <input> for specifying a date to send the message
+
+Use a color <input> for selecting the message color
+
+Use a number <input> with a default value of 0, minimum of 0, and maximum of 10 for number of times the message blinks
+
+Use a range <input> with a default value of 20, minimum of 0, and maximum of 50 for the music volume
+
+Use a submit <button> that reads "Send Birthday Message"
+
+Specify an id attribute for all form elements that matches the given for attribute of each associated <label>
+
+Specify a name attribute for all form elements that matches each element's id attribute -->
+  <head>
+    <title>Happy Birthday Message Creator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Happy Birthday Message Creator</h1>
+    <form method="POST" action="https://wp.zybooks.com/form-viewer.php">
+      <div>
+        <label for="birthdayMessage">Message?</label>
+        <input
+          type="text"
+          id="birthdayMessage"
+          name="birthdayMessage"
+          value="Happy birthday!"
+        />
+      </div>
+      <div>
+        <label for="emailAddr">Email address?</label>
+
+        <!-- TODO: Add regular expression to pattern -->
+        <input
+          type="email"
+          id="emailAddr"
+          name="emailAddr"
+          placeholder="name@domain.com"
+          pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+        />
+      </div>
+      <div>
+        <label for="dateToSend">Date to send?</label>
+        <!-- TODO: Add date widget -->
+        <input type="date" id="dateToSend" name="dateToSend" />
+      </div>
+      <div>
+        <label for="messageColor">Message color?</label>
+        <!-- TODO: Add color widget -->
+        <input type="color" name="messageColor" id="messageColor" />
+      </div>
+      <div>
+        <label for="numBlinks">Number of blinks?</label>
+        <!-- TODO: Add number widget -->
+        <input
+          type="number"
+          value="0"
+          min="0"
+          max="10"
+          id="numBlinks"
+          name="numBlinks"
+        />
+      </div>
+      <div>
+        <label for="musicVolume">Music volume?</label>
+        <!-- TODO: Add range widget -->
+        <input
+          type="range"
+          value="20"
+          min="0"
+          max="50"
+          id="musicVolume"
+          name="musicVolume"
+        />
+      </div>
+
+      <!-- TODO: Add submit button -->
+      <button type="submit">Send Birthday Message</button>
+    </form>
+  </body>
+</html>

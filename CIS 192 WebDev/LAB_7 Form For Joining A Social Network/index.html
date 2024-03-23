@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Join a social network</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Join a social network</h1>
+    <!-- Add the form below -->
+
+    <!--The form should:
+	Use the POST method and the "multipart/form-data" enctype
+	Submit to https://wp.zybooks.com/form-viewer.php
+	Use a <label> for each form field and the label text shown in the image above
+	Use a <div> to surround each label and form widget and a <div> around the submit button
+	Use a text <input> with name and id "fullName" to get the user's name
+	Use a text <input> with name and id "email" to get the user's email address
+	Use a <textarea> with 3 rows, 50 columns, and name and id "about" to get a short description about the user
+	Use a text <input> with type "file" and name and id "picture" to get the user's image
+	Use a submit <input> button
+	Use the required attribute for name and email fields -->
+    <form
+      method="POST"
+      enctype="multipart/form-data"
+      action="https://wp.zybooks.com/form-viewer.php"
+    >
+      <div>
+        <label for="fullName">Full name&#58;</label>
+        <input type="text" name="fullName" id="fullName" required />
+      </div>
+      <div>
+        <label for="email">Email address&#58;</label>
+        <input type="text" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="about">About you&#58;</label>
+        <textarea rows="3" cols="50" name="about" id="about">Sup</textarea>
+      </div>
+      <div>
+        <label for="picture">Photo&#58;</label>
+        <input type="file" name="picture" id="picture" />
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
