@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 6&#58; Part 2</title>
+    <link rel="stylesheet" href="homework_6_1.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework 6&#58; CSS Fundamentals</h1>
+      <h2>Part 2 &#58; Basic Selectors</h2>
+    </header>
+
+    <main>
+      <!--Element Class & ID Selectors-->
+      <section id="elementClassId">
+        <h3>Element&#44; Class&#44; &#38; ID Selectors</h3>
+        <div id="commonSelectorTypes">
+          <p>Three common selector types are&#58;</p>
+          <ul>
+            <li>
+              The <strong>element selector</strong>&#58; matches elements with
+              the specified element names<br />Ex&#58; p &#123;color&#58;
+              blue&#59;&#125; selects all p elements
+            </li>
+            <li>
+              The <strong>class selector</strong>&#58; with the format
+              <strong>&#46;className&#123; &#125;</strong>&#44; matches elements
+              with the matching <strong>class attribute</strong><br />Ex&#58;
+              &#46;notice &#123;color&#58; blue&#59;&#125; selects all elements
+              with the
+              <strong>class&#61;&#34;notice advisory&#34;</strong>
+              attribute&#46;
+              <ul>
+                <li>
+                  Notice how the class attribute can be assigned
+                  <strong>more than one class</strong>&#46; Furthermore&#44;
+                  while id attributes must be unique&44; many elements can use
+                  the same HTML class name&#44;
+                </li>
+              </ul>
+            </li>
+            <li>
+              The <strong>ID selector</strong>&#58; with the format
+              <strong>&#35;idName &#123; &#125;</strong> matches elements with
+              the matching <strong>id attribute</strong><br />Ex&#46;
+              &#35;byLine &#123;color&#58; blue&#59;&#125; selects elements with
+              the
+              <strong>id&#61;&#34;byLine&#34; attribute</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Descendant Selector-->
+      <section id="descendantSelector">
+        <h3>Descendant Selector</h3>
+        <p>
+          The <strong>descendant selector</strong> with the format
+          <strong>firstSelector secondSelector &#123; &#125;</strong> matches
+          secondSelector elements contained within firstSelector elements
+        </p>
+      </section>
+
+      <!-- Pseudo Class Selector-->
+      <section id="pseudoSelector">
+        <h3>Pseudo&dash;class Selector</h3>
+        <p>
+          <strong>Pseudo&dash;selector</strong>&#58; with the format
+          <strong>&#58;pseudoClassName &#123; &#125;</strong> matches elements
+          based on <strong>user behavior</strong> or
+          <strong>element metainformation</strong>
+        </p>
+        <p>Example pseudo&dash;class selectors&#58;</p>
+        <ul>
+          <li><strong>&#58;disabled</strong>&#58; Element is disabled</li>
+          <li>
+            <strong>&#58;hover</strong>&#58; Mouse is hovering over element
+          </li>
+          <li>
+            <strong>&#58;empty</strong>&#58; Element has no child elements
+          </li>
+          <li>
+            <strong>&#58;lang</strong>&#58; &#40;language&#41; Element contains
+            text in a specific language
+          </li>
+          <li>
+            <strong>&#58;nth&dash;child</strong>&#58; Element is the parent
+            elements <strong>nth</strong>&dash;child
+          </li>
+        </ul>
+        <p>
+          <strong><span style="color: red">class</span> selectors</strong> and
+          <strong
+            >pseudo&dash;<span style="color: red">class</span> selectors</strong
+          >
+          can combine with element names&#46;<br />
+          <b>Ex&#46;</b> a&#58;hover selects only the anchor tag the mouse is
+          hovering over<br />
+          <b>Ex&#46;</b> span&#46;highlight selects only span elements that have
+          the class attribute value highlight<br /><strong
+            >Below is an example of a table with examples of the discussed
+            selectors in the external css file&#46;</strong
+          >
+        </p>
+
+        <div id="exampleTable">
+          <table>
+            <caption>
+              2022 Olympic Medal Counts
+            </caption>
+            <tr>
+              <th>Country</th>
+              <th>Gold</th>
+              <th>Silver</th>
+              <th>Bronze</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>Norway</td>
+              <td>16</td>
+              <td>8</td>
+              <td>13</td>
+              <td>37</td>
+            </tr>
+            <tr>
+              <td>ROC</td>
+              <td>6</td>
+              <td>12</td>
+              <td>14</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>Germany</td>
+              <td>12</td>
+              <td>10</td>
+              <td>5</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>Canada</td>
+              <td>4</td>
+              <td>8</td>
+              <td>14</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td>USA</td>
+              <td>8</td>
+              <td>10</td>
+              <td>7</td>
+              <td>25</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

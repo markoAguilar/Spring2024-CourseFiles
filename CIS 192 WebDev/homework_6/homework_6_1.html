@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 6&#58; Part 1</title>
+    <link rel="stylesheet" href="homework_6_1.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework 6&#58; CSS Fundamentals</h1>
+      <h2>Part 1: Using CSS In HTML</h2>
+    </header>
+
+    <main>
+      <section>
+        <h3>Introduction To CSS</h3>
+        <p>
+          <strong>CSS &#40;Cascading Style Sheets&#41;</strong> describes how
+          the webpage is styled for visual presentation&#46; The applied style
+          rules <strong>cascade downfrom general to more specific</strong> with
+          the more specific rules <strong>overriding</strong> more general rules
+        </p>
+        <div id="cssSelectorP">
+          <p>A <strong>CSS Rule</strong> consists of&#58;</p>
+          <ul>
+            <li>
+              A <strong>selector</strong>&#58; Specifies the HTML elements to
+              which the style rules apply
+            </li>
+            <li>
+              A <strong>declaration block</strong>&#58; Contains one or more
+              declarations separated by semicolons
+              <strong>&#40;&#59;&#41;</strong>
+            </li>
+            <li>
+              <strong>Styling Declarations</strong>&#58; Each styling
+              declaration is a line with a key&#58;value pair and ending with a
+              semicolon <strong>&#40;&#59;&#41;</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Applying CSS -->
+      <section id="applyingCss">
+        <h3>Applying CSS</h3>
+        <p>CSS can be applied by&#58;</p>
+        <ul>
+          <li>
+            <strong>Inline Declarations</strong>&#58; Inline declarations are
+            written as the value to the <strong>style attribute</strong> and are
+            also key&#58; value&#59; pairs inside quotes&#46; No curly braces
+            required&#46;
+          </li>
+          <li>
+            <strong>Embedded CSS</strong>&#58; Embedded css is written between
+            two <strong>&#60;style&#62; tags</strong> in between the
+            <strong>&#60;head&#62;</strong> tags of your html document
+          </li>
+          <li>
+            <strong>External Style Sheets</strong>&#58; This is a separate files
+            that is linked to your html document within the head tags using the
+            format&#58;
+            <strong
+              >&#60;link rel&#61;&#34;stylesheet&#34;
+              href&#61;&#34;cssFileName&#46;css&#34;&#62;</strong
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!--Inheritance and Conflict-->
+      <section id="inheritanceConflict">
+        <h3>Inheritance And Conflict</h3>
+        <p>
+          When two style declarations with identical properties apply to the
+          same element a <strong>conflict</strong> occurs&#46; Two common types
+          of conflicts are&#58;
+        </p>
+        <ul style="color: blue">
+          <li style="background: orange">
+            A <strong>parent&#39;s declaration</strong> conflicts with a
+            <strong>child&#39;s declaration</strong>&#58; When this conflict
+            occurs&#44; the child&#39;s declaration overrides the parent&#39;s
+            declaration
+          </li>
+          <li style="color: black; background: blue">
+            An <strong>embedded or external style sheet</strong> conflicts with
+            an <strong>inline declaration</strong>&#58; When this conflict
+            occurs&#44; the inline declaration <strong>overrides</strong> the
+            external or embedded declarations
+          </li>
+        </ul>
+        <p>
+          See the code for this unordered list for an example of how conflicts
+          occur and how they are resolved&#33;
+        </p>
+      </section>
+
+      <!-- Specificity and !Important-->
+      <section id="specificty">
+        <h3>Specificity and &#33;important</h3>
+        <p>
+          A browser uses <strong>specificity</strong> which is like a scoring
+          system to apply css rules appropriately. In more complex cases you may
+          wish to override this&#46; To do so you would need to add the
+          <strong>&#33;important</strong> rule right before ending a declaration
+          line&#46; This overrides all other declarations&#46; However&#44; this
+          is not good practice as implementation changes can easily become
+          overly complex&#33;
+        </p>
+      </section>
+    </main>
+
+    <!-- Example -->
+    <section id="example" style="color: red">
+      <p style="color: inherit">
+        Another value that can be assigned to CSS
+        <strong>property values</strong> is the
+        <strong>inherit</strong> value&#33; For example&#44; in this paragraph I
+        have assigned the property of color to the value inherit&#46; By default
+        the text should be black&#44; but since I have made it inherit the color
+        of its parent&#44; it will now be red&#33; Changing the color of the
+        parent container will now effectively change the color of this paragraph
+        as well
+      </p>
+    </section>
+    <footer></footer>
+  </body>
+</html>

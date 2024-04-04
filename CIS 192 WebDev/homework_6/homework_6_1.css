@@ -1,0 +1,26 @@
+strong {
+  color: blue;
+  background: lightblue;
+}
+
+ul strong {
+  color: violet;
+  background: black;
+}
+
+/*Used in homework_6_2.html*/
+table {
+  font-family: Arial;
+  border: 2px solid black;
+}
+
+/*Note how nth-child can also specify even and odd numbers
+ * You can also use any number n, starting from 1
+ * first-child and last-child*/
+tr:nth-child(even) {
+  background-color: lavender;
+}
+
+th:hover {
+  color: orange;
+}
