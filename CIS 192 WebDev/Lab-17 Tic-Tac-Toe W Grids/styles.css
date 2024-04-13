@@ -1,0 +1,40 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.x {
+  color: red;
+}
+
+.o {
+  color: blue;
+}
+
+#board {
+  font:
+    85px arial,
+    sans-serif;
+  margin: 3px;
+
+  /* Your solution goes here */
+  /*set the div with id board to have a grid type display*/
+  display: grid;
+
+  /*grid has 3 cols of width 100px each*/
+  grid-template-columns: 100px 100px 100px;
+
+  /*grid has 3 rows of height 100px each*/
+  grid-template-rows: 100px 100px 100px;
+
+  /*grid has 10px of space between all cells*/
+  grid-gap: 10px;
+
+  /*centers the grid horizontally*/
+  justify-content: center;
+}
+
+#board > div {
+  border: 1px solid LightSkyBlue;
+  text-align: center;
+}

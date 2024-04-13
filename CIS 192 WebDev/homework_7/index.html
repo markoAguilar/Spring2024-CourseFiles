@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HW 7</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Homework 7: CSS Fundamentals 2</h1>
+      <h2>Advanced Selectors</h2>
+    </header>
+
+    <main>
+      <section id="selectors">
+        <h3>Selectors</h3>
+        <ul>
+          <li>
+            <strong>Universal Selector</strong>&#58; specified using an
+            <strong>asterisk</strong> matches all elements in the webpage
+          </li>
+          <li>
+            <strong>Multiple Selector</strong>&#58; specified as
+            <strong>elemenent&#44; element</strong> matches more than one of a
+            specified element
+          </li>
+          <li>
+            <strong>Child Selector</strong> specified using the
+            <strong>&#60;</strong> character
+            <strong>between two selectors</strong> matches elements that have
+            the second element as a <strong>direct child</strong>
+          </li>
+          <li>
+            <strong>Descendant Selector</strong> specified with a
+            <strong>spaced between two selectors</strong> matches all of the
+            second element descendants of the first element
+          </li>
+          <li>
+            <strong>General Sibling Selector</strong> specified with a tilde
+            <strong>~</strong> between two selectors matches all of the second
+            element if the second element occurs after the first.
+          </li>
+          <li>
+            <strong>Adjacent Sibling Selector</strong> specified with the
+            <strong>+</strong> sign matches the second element that immediately
+            follows the first element&#44; where both elements have the same
+            parent
+          </li>
+          <li>
+            <strong>Attribute Selector</strong> encased in brackets
+            <strong>[ ]</strong> matches the element with the attribute or
+            attribute value pair&#33;
+            <img src="../images/attributeSelect.png" width="500px" />
+          </li>
+          <li>
+            <strong>pseudo element selector</strong>&#58; specified with two
+            colon characters <strong>::</strong> followed by a
+            <strong>pseudo-element</strong> matches parts of elements
+            <img src="../images/pseudo-select.png" width="500px" />
+          </li>
+        </ul>
+      </section>
+
+      <section id="commonProperties">
+        <h3>Common CSS Properties</h3>
+        <ul>
+          <li>
+            <strong>color property</strong>&#58; changes the text color, can be
+            either one of the 140 CSS color names, rgb(red&#44; green&#44; blue)
+            with max 255 per color value,
+            <strong>hexadecimal color</strong> #RRGGBB where 00 is the lowest
+            intensity and FF is the highest&#44; an
+            <strong
+              >HSL value&#58; hsl(hue&#44; saturation&#44; lightness)</strong
+            >
+            with max values <strong>hsl(360&#44; 100%&#44; 100%)</strong>
+          </li>
+        </ul>
+        <ul
+          id="background"
+          style="
+            background-image: url(&quot;../images/sindel.jpg&quot;);
+            opacity: 80%;
+            color: white;
+          "
+        >
+          Background Properties
+          <li>
+            <strong>background-color property</strong>&#58; specifies the
+            background color
+          </li>
+          <li>
+            <strong>background-image</strong>&#58; specifies a background image,
+            can be an image using the url("locationOfImage") value
+          </li>
+          <li>
+            <strong>background</strong>&#58; shorthand for setting multiple
+            properties at once
+          </li>
+        </ul>
+
+        <ul>
+          Float property
+          <li></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
