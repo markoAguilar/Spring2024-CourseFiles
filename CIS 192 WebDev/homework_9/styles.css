@@ -1,0 +1,122 @@
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+@keyframes changeColors {
+  /* no movement in the below example */
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: green;
+  }
+}
+
+#testDiv1 {
+  /*width and height of div*/
+  width: 300px;
+  height: 100px;
+
+  /*Default to this background color after animation*/
+  background-color: orange;
+
+  /*Names the associated keyframes list*/
+  animation-name: changeColors;
+
+  /*length of animation in seconds(s) or milliseconds (ms)
+   * must be declared for animation to occur*/
+  animation-duration: 1s;
+
+  /*If no delay set, animation runs immediately after opening page*/
+  animation-delay: 2s;
+}
+
+/* used for id="smiley" div in html
+ * moves smiley face from middle top to middle bottom
+ * from can also be represented with a 0%
+ * and to can be represented with a 100% */
+@keyframes move {
+  0% {
+    color: red;
+    left: 50%;
+    top: 0px;
+  }
+  50% {
+    color: blue;
+    left: 50%;
+    top: 100%;
+    background-color: yellow;
+  }
+  100% {
+    color: red;
+    left: 50%;
+    top: 0%;
+  }
+}
+
+#smiley {
+  color: red;
+  font-size: 50pt;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  background-color: purple;
+  border-radius: 20px;
+  /* animation-timing-function controls animations speeds too
+   *    other ex's: linear, ease, ease-in, ease-in-out, cubic-bezier(n1,n2,n3,n4)
+   * animationd-duration must be set to play animation at all
+   * animation-iteration-count is the number of times the animation will run
+   * animation-direction indicates general animation direction
+   * animation property indicates the below in the same order on one line
+   *    ex: animation: move 5s ease-out 1s infinite reverse; */
+  animation-name: move;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+/* Initial styling for div with id="testDiv2"
+ * a transition is called here with a 1 second animation for the width
+ *      and a 1s animation for the height.
+ * other CSS properties can be animated the same by adding the property
+ *      name and time value separated by a comma */
+div#testDiv2 {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: purple;
+  transition:
+    width 1s,
+    height 1s,
+    opacity 3s,
+    color 1s;
+  /*delays start of transition*/
+  transition-delay: 500ms;
+}
+
+/* the div with id="testDiv2" will perform the following transition
+ * when hovered over.
+ * Other states are :hover, :active, :inactive, :focus, :invalid, etc...*/
+div#testDiv2:hover {
+  width: 150px;
+  height: 150px;
+  opacity: 50%;
+  color: red;
+  /*transform property applies a 2d or 3d transformation to an element */
+  animation: slideRight 1s linear;
+  animation-delay: 0.5s;
+}
+
+/* transform property applies a 2d or 3d transformation to an element 
+ *      other values are translate() and scale()*/
+@keyframes slideRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
