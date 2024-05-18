@@ -1,0 +1,37 @@
+:root {
+  --header-color: white;
+  --font-color: #aed3e1;
+  --bg-gradient: linear-gradient(to right, cyan, red);
+}
+
+.navbar-container {
+  background: var(--bg-gradient);
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  border-radius: 20px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+h2,
+ul,
+li {
+  background: rgb(200, 111, 111);
+  border: 2px solid white;
+  display: inline-block;
+}
+
+h2 {
+  height: 40px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  height: 40px;
+  width: 100px;
+}
